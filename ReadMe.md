@@ -8,7 +8,7 @@ StringSmash is a simple RoboFont extension/Glyphs App script to generate strings
 
 # Interface Elements
 
-![StringSmash GUI](StringSmashGUI.png "StringSmash GUI")
+![StringSmash GUI](Images/StringSmashGUI.png "StringSmash GUI")
 ## List Setup
 
 **1) Left delimiter**

@@ -125,7 +125,6 @@ class StringSmash(object):
         yPos = 175
         names = ['flip', 'trio']
         x = 0
-        user = getpass.getuser()
         for i in names:
             imgPath = os.path.dirname(os.path.abspath(__file__))
             imgPath = os.path.join(imgPath, 'icons/%s.png' %i)
@@ -272,8 +271,7 @@ class StringSmash(object):
         if Glyphs.font:
             aDir, aFile = os.path.split(Glyphs.font.filepath)
         else:
-            user = getpass.getuser()
-            aDir = '/Users/' + user + '/Desktop'
+            aDir = os.path.expanduser('~/Desktop')
             # should offer to select a folder
         
         stamp = self.makeTimeStamp()

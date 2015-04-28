@@ -80,9 +80,8 @@ class StringSmash(object):
             
             # diff
             # decoration
-            user = getpass.getuser()
-            imgPath = '/Users/' + user + '/Library/Application Support/Glyphs/Scripts/StringSmash/icons/'
-            imgPath += '%s.png' %i
+            imgPath = os.path.dirname(os.path.abspath(__file__))
+            imgPath = os.path.join(imgPath, 'icons/%s.png' %i)
             imageButton = ImageButton((5, yPos[x]-2, 60, 24), imagePath=imgPath, title=None, bordered=False)                             
             setattr(self.w, 'image_%s' %i, imageButton)
             x += 1   
@@ -125,27 +124,23 @@ class StringSmash(object):
         xPos = [20, 190]
         yPos = 175
         names = ['flip', 'trio']
-        x = 0    
+        x = 0
         user = getpass.getuser()
         for i in names:
-            imgPath = '/Users/' + user + '/Library/Application Support/Glyphs/Scripts/StringSmash/icons/'
-            imgPath += '%s.png' %i
-            imageButton = ImageButton((xPos[x], yPos-2, 60, 24), imagePath=imgPath, title=None, bordered=False)                             
+            imgPath = os.path.dirname(os.path.abspath(__file__))
+            imgPath = os.path.join(imgPath, 'icons/%s.png' %i)
+            imageButton = ImageButton((xPos[x], yPos-2, 60, 24), imagePath=imgPath, title=None, bordered=False)
             setattr(self.w, 'image_%s' %i, imageButton)
-            x += 1   
-
-        
+            x += 1
         
         # horizontal dividers
         yPos = [160, 210]
         for i in yPos:
-            horizontalLine = HorizontalLine((0, i, -0, 1))  
+            horizontalLine = HorizontalLine((0, i, -0, 1))
             setattr(self.w, 'horizontalLine_%i' %i, horizontalLine)
-
-
+        
         self.w.verticalLine = VerticalLine((170, 161, 1, 50))
-
-            
+        
         self.w.open()
        
     

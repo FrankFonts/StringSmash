@@ -37,14 +37,14 @@ class StringSmash(object):
         f = Glyphs.font
         font = []
         for i in f.glyphs:
-        	font.append(i.name)
+            font.append(i.name)
     else:
         font = []
     
     
     def __init__(self):
         '''A simple GUI'''
-        self.w = FloatingWindow((-360, 40, 340, 330), "StringSmash v.1.0", textured=False)
+        self.w = FloatingWindow((-360, 40, 340, 330), "StringSmash v.1.0", textured=False, autosaveName = "com.belafrank.StringSmash.mainwindow")
         
         # list selections
         presetList = sorted(StringSmashDicts.presetDict.keys())
@@ -232,7 +232,7 @@ class StringSmash(object):
         theString = self.generateString(self.delimL, self.delimR, self.listL, self.listR, self.flip, self.trio, False) 
         
         if theString != '':
-            os.system('echo "%s" | pbcopy' % theString) # copy to Clipboard, neat
+            os.system('echo "%s" | pbcopy' % theString) # copy to Clipboard, neat
         else:
             pass
     

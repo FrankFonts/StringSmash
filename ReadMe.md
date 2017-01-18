@@ -51,7 +51,7 @@ Generates the string and copies it onto the Clipboard.
 
 Generates the string and saves it into a time-stamped .txt file next to the UFO file or if there's no file open in the editor than onto the user's Desktop. At least the left list (2) and right list (3) have to be set.
 
-**8) Generate and Copy**
+**10) Save MM Style**
 
 Generates the string and saves it into a time-stamped MetricsMachine-style .txt file next to the UFO file or if there's no file open in tghe editor than onto the user's Desktop. At least the left list (2) and right list (3) have to be set.
 

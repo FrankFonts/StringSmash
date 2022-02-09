@@ -17,7 +17,6 @@ import getpass
 
 # presets
 import StringSmashDicts
-reload (StringSmashDicts)
 
 class StringSmash(object):
     '''Returns string'''

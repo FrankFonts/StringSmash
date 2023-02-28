@@ -283,7 +283,7 @@ class StringSmash(object):
     
     # diff
     def openTab(self, aString):
-        Glyphs.currentDocument.windowController().addTabWithString_(aString)
+        Glyphs.font.newTab(aString)
     
     
     ''' this is what needed to successfully generate a string
